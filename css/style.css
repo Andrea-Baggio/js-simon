@@ -10,19 +10,47 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: calc(100vh - 20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
 }
 
 #btn-start {
-    padding: .8rem;
+    padding: .6rem;
     cursor: pointer;
 }
 
 .hidden {
     display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.bar {
+    border: 1px solid #666;
+    height: 20px;
+    width: 100%;
+}
+    
+.in {
+    animation: fill 7s linear 1;
+    height: 100%;
+    background-color: greenyellow;
+}
+  
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }

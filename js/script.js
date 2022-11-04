@@ -11,26 +11,14 @@ Consigli del giorno:
 
 const eleStartScreen = document.querySelector('.start-screen');
 const eleStartButton = document.querySelector('#btn-start');
-const eleContainer = document.querySelector('.container');
+const eleRules = document.querySelector('.rules');
+const eleBar = document.querySelector('.bar');
 
-
-eleStartButton.addEventListener('click', function() {
-    eleContainer.innerHTML = "";
-})
+eleStartButton.addEventListener('click', startButton)
 
 function startButton () {
-
+    eleStartButton.classList.add('hidden');
+    eleStartScreen.classList.add('hidden');
+    eleRules.classList.remove('hidden');
+    eleBar.classList.remove('hidden');
 }
-
-
-/*
-eleGrid.classList.remove('hidden');
-eleStartScreen.classList.add('hidden');
-
-
-const element = document.querySelector('.classe');
-
-const eleAppend = document.createElement('div');
-eleAppend.classList.add('class');
-element.append(eleCell);
-*/
