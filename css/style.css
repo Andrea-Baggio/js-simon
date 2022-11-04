@@ -15,13 +15,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     text-align: center;
     max-width: 900px;
     margin: auto;
 }
 
-#btn-start {
+.btn-start {
+    margin-top: 1.3rem;
     padding: .6rem;
     cursor: pointer;
 }
@@ -35,7 +35,6 @@ body {
 }
 
 .bar {
-    border: 1px solid #666;
     height: 20px;
     width: 100%;
 }

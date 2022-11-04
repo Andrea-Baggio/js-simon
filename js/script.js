@@ -9,8 +9,7 @@ Consigli del giorno:
 * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 */
 
-const eleStartScreen = document.querySelector('.start-screen');
-const eleStartButton = document.querySelector('#btn-start');
+const eleStartButton = document.querySelector('#first-block');
 const eleRules = document.querySelector('.rules');
 const eleBar = document.querySelector('.bar');
 
@@ -18,7 +17,16 @@ eleStartButton.addEventListener('click', startButton)
 
 function startButton () {
     eleStartButton.classList.add('hidden');
-    eleStartScreen.classList.add('hidden');
     eleRules.classList.remove('hidden');
     eleBar.classList.remove('hidden');
+    
+    
+    
+    setTimeout(function() {
+        eleRules.classList.add('hidden');
+        eleBar.classList.add('hidden');
+    }, 7000);
 }
+
+
+
