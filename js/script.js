@@ -12,21 +12,32 @@ Consigli del giorno:
 const eleStartButton = document.querySelector('#first-block');
 const eleRules = document.querySelector('.rules');
 const eleBar = document.querySelector('.bar');
+const eleGame = document.querySelector('.game')
 
-eleStartButton.addEventListener('click', startButton)
+const arrNumbers = [1, 2, 3, 89]
 
 function startButton () {
     eleStartButton.classList.add('hidden');
     eleRules.classList.remove('hidden');
     eleBar.classList.remove('hidden');
     
-    
-    
     setTimeout(function() {
         eleRules.classList.add('hidden');
         eleBar.classList.add('hidden');
-    }, 7000);
+    }, 1000);
+
+    setTimeout(function() {
+        eleGame.classList.remove('hidden');
+    }, 1100);
+    
+    setTimeout(function() {
+    eleGame.classList.add('hidden');
+    }, 2100);
 }
 
+eleStartButton.addEventListener('click', startButton)
 
+
+// const arrNumbers = [1, 2, 3, 89]
+eleGame.innerHTML += arrNumbers;
 
