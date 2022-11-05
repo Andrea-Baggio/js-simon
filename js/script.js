@@ -15,7 +15,7 @@ const eleBar = document.querySelector('.bar');
 const eleSecondBar = document.querySelector('.second-bar');
 const eleGame = document.querySelector('.game');
 
-const arrNumbers = ['1', ' 2', ' 3', ' 4'];
+// const arrNumbers = ['1'];
 // const userNumbers = prompt('Inserisci i numeri che ricordi!');
 
 function startButton () {
@@ -31,25 +31,36 @@ function startButton () {
     setTimeout (function() {
         eleGame.classList.remove('hidden');
         eleSecondBar.classList.remove('hidden'); 
-    }, 7200);
+    }, 7100);
     
     setTimeout (function() {
         eleGame.classList.add('hidden'); 
         eleSecondBar.classList.add('hidden'); 
     }, 37000);
-    eleGame.innerHTML += arrNumbers;
+    
+    const arrNumbers = [];
+
+    const randomNumbers = Math.floor(Math.random() * 100);
+    for (let i = 0; i < 5; i++) {  
+        arrNumbers.push(randomNumbers);       
+        console.log(arrNumbers);            
+    }   
+    eleGame.innerHTML += arrNumbers[i];
 }
 
-
-
-eleStartButton.addEventListener('click', startButton)
+eleStartButton.addEventListener('click', startButton);
 
  
 
 
 
+                                           
+
+
+
 
 //questa roba va inserita nella funzione e va sincronizzata con eleGame
+// questo serve per la validazione della risposta
 // for (let i = 0; i < arrNumbers.length; i++) {
 
 //     if (userNumbers === arrNumbers[i]) {
@@ -60,19 +71,3 @@ eleStartButton.addEventListener('click', startButton)
 
 // }
 
-
-
-// function generateMines(nMines, min, max) {
-// 	const arrRandoms = [];
-// 	for (let i = 0; i < nMines; i++) {
-// 		do {
-// 			randomNumber = getRandomInteger(min, max);
-// 		} while (arrRandoms.includes(randomNumber))
-// 		arrRandoms.push(randomNumber);
-// 	}
-// 	return arrRandoms;
-// }
-
-// function getRandomInteger(min, max) {
-// 	return Math.floor(Math.random() * (max - min + 1) ) + min;
-// }

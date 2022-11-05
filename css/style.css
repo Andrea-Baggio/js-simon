@@ -37,7 +37,6 @@ body {
 .bar, .second-bar {
     height: 20px;
     width: 100%;
-    border: 2px solid red;
 }
     
 .in {
