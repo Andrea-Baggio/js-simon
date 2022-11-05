@@ -12,32 +12,67 @@ Consigli del giorno:
 const eleStartButton = document.querySelector('#first-block');
 const eleRules = document.querySelector('.rules');
 const eleBar = document.querySelector('.bar');
-const eleGame = document.querySelector('.game')
+const eleSecondBar = document.querySelector('.second-bar');
+const eleGame = document.querySelector('.game');
 
-const arrNumbers = [1, 2, 3, 89]
+const arrNumbers = ['1', ' 2', ' 3', ' 4'];
+// const userNumbers = prompt('Inserisci i numeri che ricordi!');
 
 function startButton () {
     eleStartButton.classList.add('hidden');
     eleRules.classList.remove('hidden');
     eleBar.classList.remove('hidden');
     
-    setTimeout(function() {
+    setTimeout (function() {
         eleRules.classList.add('hidden');
         eleBar.classList.add('hidden');
-    }, 1000);
+    }, 7000);
 
-    setTimeout(function() {
+    setTimeout (function() {
         eleGame.classList.remove('hidden');
-    }, 1100);
+        eleSecondBar.classList.remove('hidden'); 
+    }, 7200);
     
-    setTimeout(function() {
-    eleGame.classList.add('hidden');
-    }, 2100);
+    setTimeout (function() {
+        eleGame.classList.add('hidden'); 
+        eleSecondBar.classList.add('hidden'); 
+    }, 37000);
+    eleGame.innerHTML += arrNumbers;
 }
+
+
 
 eleStartButton.addEventListener('click', startButton)
 
+ 
 
-// const arrNumbers = [1, 2, 3, 89]
-eleGame.innerHTML += arrNumbers;
 
+
+
+//questa roba va inserita nella funzione e va sincronizzata con eleGame
+// for (let i = 0; i < arrNumbers.length; i++) {
+
+//     if (userNumbers === arrNumbers[i]) {
+//     alert('Bravo');
+//     } else {
+//         alert('nope');
+//     }
+
+// }
+
+
+
+// function generateMines(nMines, min, max) {
+// 	const arrRandoms = [];
+// 	for (let i = 0; i < nMines; i++) {
+// 		do {
+// 			randomNumber = getRandomInteger(min, max);
+// 		} while (arrRandoms.includes(randomNumber))
+// 		arrRandoms.push(randomNumber);
+// 	}
+// 	return arrRandoms;
+// }
+
+// function getRandomInteger(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1) ) + min;
+// }

@@ -34,13 +34,29 @@ body {
     display: inline;
 }
 
-.bar {
+.bar, .second-bar {
     height: 20px;
     width: 100%;
+    border: 2px solid red;
 }
     
 .in {
     animation: fill 7s linear 1;
+    height: 100%;
+    background-color: greenyellow;
+}
+  
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.inn {
+    animation: fill 30s linear 1;
     height: 100%;
     background-color: greenyellow;
 }
