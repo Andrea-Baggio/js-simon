@@ -40,12 +40,13 @@ function startButton () {
     
     const arrNumbers = [];
 
-    const randomNumbers = Math.floor(Math.random() * 100);
+    const randomNumbers = Math.floor(Math.random() * 100 + 1);
     for (let i = 0; i < 5; i++) {  
         arrNumbers.push(randomNumbers);       
         console.log(arrNumbers);            
-    }   
-    eleGame.innerHTML += arrNumbers[i];
+       
+    eleGame.innerHTML += arrNumbers[i] + ' ';
+}
 }
 
 eleStartButton.addEventListener('click', startButton);
