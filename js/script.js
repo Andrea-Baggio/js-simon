@@ -3,6 +3,7 @@ const eleRules = document.querySelector('.rules');
 const eleBar = document.querySelector('.bar');
 const eleSecondBar = document.querySelector('.second-bar');
 const eleGame = document.querySelector('.game');
+const eleForm = document.querySelector('.form');
 
 function startButton () {
     eleStartButton.classList.add('hidden');
@@ -17,41 +18,41 @@ function startButton () {
     setTimeout (function() {
         eleGame.classList.remove('hidden');
         eleSecondBar.classList.remove('hidden'); 
-    }, 7100);
+    }, 7200);
     
     setTimeout (function() {
         eleGame.classList.add('hidden'); 
         eleSecondBar.classList.add('hidden'); 
-    }, 37000);
+    }, 37200);
+
+    // setTimeout (function() {
+    //     eleForm.classList.add('show');
+    // }, 38200);
 
     const arrNumbers = [];
 
-    const randomNumbers1 = Math.floor(Math.random() * 100);
-    const randomNumbers2 = Math.floor(Math.random() * 100);
-    const randomNumbers3 = Math.floor(Math.random() * 100);
-    const randomNumbers4 = Math.floor(Math.random() * 100);
-    const randomNumbers5 = Math.floor(Math.random() * 100);
+    const randomNumbers1 = Math.floor(Math.random() * 200);
+    const randomNumbers2 = Math.floor(Math.random() * 200);
+    const randomNumbers3 = Math.floor(Math.random() * 200);
+    const randomNumbers4 = Math.floor(Math.random() * 200);
+    const randomNumbers5 = Math.floor(Math.random() * 200);
 
     for (let i = 0; i < 5; i++) {  
         arrNumbers.push(randomNumbers1, randomNumbers2, randomNumbers3, randomNumbers4, randomNumbers5);       
-        console.log(arrNumbers[i]);        
+        // console.log(arrNumbers[i]);        
        
         eleGame.innerHTML += arrNumbers[i] + ' ';
+
+        // if (userNumbers === arrNumbers[i]) {
+        // alert('Bravo');
+        // } else {
+        //     alert('nope');
+        // }
     }
 }
 
 eleStartButton.addEventListener('click', startButton);
-                                           
 
-
-//questa roba va inserita nella funzione e va sincronizzata con eleGame
-// questo serve per la validazione della risposta
-// for (let i = 0; i < arrNumbers.length; i++) {
-
-//     if (userNumbers === arrNumbers[i]) {
-//     alert('Bravo');
-//     } else {
-//         alert('nope');
-//     }
-
-// }
+eleForm.addEventListener ('submit', function (event) {
+	event.preventDeafault();
+})

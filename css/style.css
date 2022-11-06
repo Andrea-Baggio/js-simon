@@ -20,10 +20,14 @@ body {
     margin: auto;
 }
 
+.btn:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 .btn-start {
     margin-top: 1.3rem;
     padding: .6rem;
-    cursor: pointer;
 }
 
 .hidden {
