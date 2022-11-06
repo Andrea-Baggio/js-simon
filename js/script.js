@@ -3,7 +3,10 @@ const eleRules = document.querySelector('.rules');
 const eleBar = document.querySelector('.bar');
 const eleSecondBar = document.querySelector('.second-bar');
 const eleGame = document.querySelector('.game');
-const eleForm = document.querySelector('.form');
+const eleForm = document.querySelector('form');
+const eleInput = document.querySelector('input')
+
+const arrNumbers = ['1'];
 
 function startButton () {
     eleStartButton.classList.add('hidden');
@@ -25,11 +28,9 @@ function startButton () {
         eleSecondBar.classList.add('hidden'); 
     }, 37200);
 
-    // setTimeout (function() {
-    //     eleForm.classList.add('show');
-    // }, 38200);
-
-    const arrNumbers = [];
+    setTimeout (function() {
+        eleForm.classList.add('show');
+    }, 3740);
 
     const randomNumbers1 = Math.floor(Math.random() * 200);
     const randomNumbers2 = Math.floor(Math.random() * 200);
@@ -53,6 +54,17 @@ function startButton () {
 
 eleStartButton.addEventListener('click', startButton);
 
-eleForm.addEventListener ('submit', function (event) {
-	event.preventDeafault();
-})
+
+eleForm.addEventListener('submit', function (event) {
+	event.preventDefault();
+
+	for (let i = 0; i < arrNumbers.length; i++) {
+
+		if (eleInput.value === arrNumbers[i]) {
+			console.log('trovata');
+            numbers = true;
+		} else {
+            console.log('non trovata');
+        }
+	}
+});
